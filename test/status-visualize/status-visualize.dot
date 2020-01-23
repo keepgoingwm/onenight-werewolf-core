@@ -1,0 +1,18 @@
+digraph "fsm" {
+  "CONFIG";
+  "RULE";
+  "OPERATE1";
+  "OPERATE2";
+  "OPERATE3";
+  "ARGUE";
+  "VOTE";
+  "RESULT";
+  "CONFIG" -> "RULE" [ label=" step " ];
+  "RULE" -> "OPERATE1" [ label=" step " ];
+  "OPERATE1" -> "OPERATE2" [ label=" step " ];
+  "OPERATE2" -> "OPERATE3" [ label=" step " ];
+  "OPERATE3" -> "ARGUE" [ label=" step " ];
+  "ARGUE" -> "VOTE" [ label=" step " ];
+  "VOTE" -> "RESULT" [ label=" step " ];
+  "OPERATE1" -> "RULE" [ label=" restart " ];
+}

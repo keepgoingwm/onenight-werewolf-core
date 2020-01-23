@@ -1,0 +1,25 @@
+{
+  "name": "onenight-werewolf-core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsc -w",
+    "test": "mocha test/unit",
+    "types": "npm link && dts-gen -m onenight-werewolf-core -f types/index.d.ts -o",
+    "status-visualize": "node test/status-visualize/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "javascript-state-machine": "git+ssh://git@github.com/keepgoingwm/javascript-state-machine.git"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "dts-gen": "^0.6.0",
+    "mocha": "^7.0.0",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.5"
+  }
+}

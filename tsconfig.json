@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "outDir": "dist",
+    "strict": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "importHelpers": true,
+    "esModuleInterop": true,
+    "noImplicitThis": true,
+    "sourceMap": true,
+    "lib": ["ES6", "dom"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "test/**/*.ts", "test/**/*.tsx", "test/unit/game.spec.js"],
+  "exclude": ["node_modules"]
+}
