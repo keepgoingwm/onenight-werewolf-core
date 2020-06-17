@@ -115,17 +115,17 @@ export const NightNight = `漫漫长夜。。。`
 // 二段操作（化身幽灵）
 // 结果阶段操作
 
-type OperateType = 'none' | 'getPlayByRoleType' | 'getRoleByPlayerOrder' | 'swapPlayerOrder' | 'copyPlayer'
+export type OperateType = 'none' | 'getPlayByRoleType' | 'getRoleByPlayerOrder' | 'swapPlayerOrder' | 'copyPlayer'
 export interface OperateConfig {
   type: OperateType;
   targetRoleType?: RoleType;
   rangeFrom?: Array<number> | number;
   rangeTo?: Array<number> | number;
-  next?: OperateConfig
+  next?: OperateConfig  // 二段操作
 }
 
 export const operationMap: Map<RoleType, (status: GameStatus, type: string) => OperateConfig> = new Map([
-  [RoleType.Villager, function (status, type) {
+  [RoleType.Villager, function (status, type): OperateConfig {
     switch (status) {
       case GameStatus.OPERATE1:
         return {
@@ -141,7 +141,7 @@ export const operationMap: Map<RoleType, (status: GameStatus, type: string) => O
         }
     }
   }],
-  [RoleType.Seer, function (status, type) {
+  [RoleType.Seer, function (status, type): OperateConfig {
     switch (status) {
       case GameStatus.OPERATE1:
         return {

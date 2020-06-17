@@ -1,7 +1,7 @@
 import Player from '../../player'
 import RoleManager from './role-manager'
 import { getShuffledIntArray } from '../../utils'
-import { RoleType } from '../../role'
+import { RoleType, OperateConfig } from '../../role'
 
 export default class PlayManager extends RoleManager {
   private _players: Array<Player> = []
@@ -40,5 +40,9 @@ export default class PlayManager extends RoleManager {
 
   get playerRoleTypes(): Array<RoleType> {
     return this._players.map(e => e._roleType)
+  }
+  
+  playerOperate(index: number, operateConfig: OperateConfig, operateParams: any): void {
+    
   }
 }

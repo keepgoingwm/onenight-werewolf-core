@@ -1,5 +1,5 @@
 import { Operable } from './operable'
-export { RoleType } from './config'
+export { RoleType, OperateConfig } from './config'
 import { RoleName, RoleType, nameMap, cnNameMap, operationMap, orderMap } from './config'
 import { getDefaultRoles, getRoleOptions } from './utils';
 import { AI } from '../ai'
@@ -31,6 +31,10 @@ class Role implements Operable {
   getOperate(): Function {
     return this.operate
   };
+  
+  handleResult() {
+
+  }
 
   static factory(roleType: RoleType): Role {
     let o = new Role(

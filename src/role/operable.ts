@@ -6,6 +6,7 @@ export interface Operable {
   operate: Function;
 
   getOperate(): Function;
+  handleResult(): void;
 }
 
 function getOperateType() {}

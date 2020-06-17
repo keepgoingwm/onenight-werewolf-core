@@ -1,1 +1,1 @@
-"# onenight-werewolf-core" 
+# onenight-werewolf-core 

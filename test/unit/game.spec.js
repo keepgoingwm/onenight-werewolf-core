@@ -117,13 +117,13 @@ describe("Game 基本流程", function() {
 describe('Game 角色分配与重启', function() {
 
   var g = new Game()
-  var defalutRoles = [RoleType.Werewolf, RoleType.Werewolf, RoleType.Minion, RoleType.Seer, RoleType.Robber, RoleType.Troublemaker, RoleType.Insomniac, RoleType.Mason, RoleType.Mason, RoleType.Villager, RoleType.Villager]
+  var defaultRoles = [RoleType.Werewolf, RoleType.Werewolf, RoleType.Minion, RoleType.Seer, RoleType.Robber, RoleType.Troublemaker, RoleType.Insomniac, RoleType.Mason, RoleType.Mason, RoleType.Villager, RoleType.Villager]
   var firstPlayerRoles
 
   it('Game：角色分配', function() {
     firstPlayerRoles = g.playerRoleTypes
-    expect(firstPlayerRoles).to.have.members(defalutRoles)
-      .but.not.have.ordered.members(defalutRoles)
+    expect(firstPlayerRoles).to.have.members(defaultRoles)
+      .but.not.have.ordered.members(defaultRoles)
   })
 
   it('Game：状态推进', function() {
@@ -136,7 +136,7 @@ describe('Game 角色分配与重启', function() {
     var res = g.restart()
     expect(res).to.be.instanceOf(Game)
     expect(g).to.have.nested.property('_statusManager.status', RestartPoint)
-    expect(g.playerRoleTypes).to.have.members(defalutRoles)
+    expect(g.playerRoleTypes).to.have.members(defaultRoles)
       .but.not.have.ordered.members(firstPlayerRoles)
   })
 
@@ -145,12 +145,12 @@ describe('Game 角色分配与重启', function() {
 describe('Game roles log', function() {
 
   var g = new Game()
-  var defalutRoles = [RoleType.Werewolf, RoleType.Werewolf, RoleType.Minion, RoleType.Seer, RoleType.Robber, RoleType.Troublemaker, RoleType.Insomniac, RoleType.Mason, RoleType.Mason, RoleType.Villager, RoleType.Villager]
+  var defaultRoles = [RoleType.Werewolf, RoleType.Werewolf, RoleType.Minion, RoleType.Seer, RoleType.Robber, RoleType.Troublemaker, RoleType.Insomniac, RoleType.Mason, RoleType.Mason, RoleType.Villager, RoleType.Villager]
   var firstPlayerRoles
 
   it('Game：角色分配', function() {
     firstPlayerRoles = g.playerRoleTypes
-    expect(firstPlayerRoles).to.have.members(defalutRoles)
+    expect(firstPlayerRoles).to.have.members(defaultRoles)
   })
 
   it('Game：状态推进后有log', function() {
@@ -164,6 +164,7 @@ describe('Game roles log', function() {
 
 describe('Game OPERATE1 操作', function() {
 
-
+  var g = new Game()
+  
 
 })
