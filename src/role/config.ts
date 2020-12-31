@@ -49,24 +49,26 @@ export const availableRoles = {
   // }
 
 
-export type RoleName = 'Villager' | 'Mason' | 'Seer' | 'Insomniac' | 'Robber' | 'Troublemaker' | 'Drunk' | 'Hunter' | 'Werewolf' | 'Minion' | 'Tanner' | 'Doppelganger' | '狼先知' | '头狼' | '见习预言家' | '揭示者' | '女巫' | '王子' | '模仿者' | '超自然调查员'
+export type RoleName = 'Villager' | 'Mason' | 'Seer' | 'Insomniac' | 'Robber' | 'Troublemaker' |
+ 'Drunk' | 'Hunter' | 'Werewolf' | 'Minion' | 'Tanner' | 'Doppelganger' | 
+ '狼先知' | '头狼' | '见习预言家' | '揭示者' | '女巫' | '王子' | '模仿者' | '超自然调查员'
 
 export enum RoleType {
-  Villager = 1,
+  Villager = 'Villager',
   //
-  Seer,
-  Insomniac,
-  Robber,
-  Troublemaker,
-  Drunk,
-  Hunter,
-  Mason,
+  Seer = 'Seer',
+  Insomniac = 'Insomniac',
+  Robber = 'Robber',
+  Troublemaker = 'Troublemaker',
+  Drunk = 'Drunk',
+  Hunter = 'Hunter',
+  Mason = 'Mason',
   // 
-  Werewolf,
-  Minion,
+  Werewolf = 'Werewolf',
+  Minion = 'Minion',
   //
-  Tanner,
-  Doppelganger,
+  Tanner = 'Tanner',
+  Doppelganger = 'Doppelganger',
 }
 
 export const nameMap: Map<RoleType, RoleName> = new Map([
